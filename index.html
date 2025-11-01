@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MAA Annpurna & Everfresh - Authentic Indian Breakfast</title>
+    <link rel="icon" href="https://i.postimg.cc/CxvQtj2Q/logo1.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="#">
+                <img src="https://i.postimg.cc/CxvQtj2Q/logo1.png" alt="MAA Annpurna Logo">
+                <div>
+                    <span class="brand">MAA Annpurna</span>
+                    <span class="tag">Resturant & Everfresh</span>
+                </div>
+            </a>
+
+            <div class="nav-links">
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <button class="btn btn-whatsapp" onclick="openWhatsApp()">Order on WhatsApp</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Har Subah Desi Nashta, Desi Swad!</h1>
+            <p>quick delivery.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-whatsapp" onclick="openWhatsApp()">Order on WhatsApp</button>
+                <button class="btn btn-outline" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">View Menu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">🔥</div>
+                <h3>Garma-Garam</h3>
+                <p>Har roz taaza banaya jaata hai, sabse acche ingredients ke saath</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Quick Delivery</h3>
+                <p>WhatsApp par order karein aur ghar par paayen 30 minutes mein</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Swad aur Safai</h3>
+                <p>Shuddh aur swadisht khana, hygiene ke saath tayyar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="menu-header">
+            <h2>Hamare Special Dishes</h2>
+            <p>Desi nashte ke sabse swadisht aur masaledar options</p>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+            <!-- Menu cards will be injected by JS for easier maintainability -->
+        </div>
+
+        <div class="menu-center">
+            <button class="btn btn-whatsapp" onclick="toggleCart(true)">View Cart / Order</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div>
+                <h2>MAA Annpurna & Everfresh</h2>
+                <p>Hum aapke liye le aate hain shuddh aur swadisht desi nashta, jo aapke subah ko special banata hai.</p>
+                <p>Har dish ghar par banaya jaata hai, sabse acche ingredients aur masale ke saath. Hygiene aur swad dono hi hamare priority hain.</p>
+                <p>Poha se lekar jalebi, samosa se lekar chai - sab kuch taaza aur garma-garam. WhatsApp par order karein aur ghar par paayen quick delivery!</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1585238341710-4b4e6cefc902?q=80&w=2340&auto=format&fit=crop" alt="Restaurant">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div>
+                <h2>Humse Contact Karein</h2>
+
+                <div class="contact-info">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h3>Location</h3>
+                        <p>MAA Annpurna Resturant & Everfresh<br>Indore, MR 11 in front of Mahalaxmi petrol Pump<br>India</p>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-icon">⏰</div>
+                    <div>
+                        <h3>Hours</h3>
+                        <p>Monday - Friday: 6:00 AM - 11:00 AM<br>Saturday - Sunday: 6:00 AM - 1:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <h3>WhatsApp Order</h3>
+                        <p>Click below to order on WhatsApp<br>Quick delivery available!</p>
+                        <button class="btn btn-whatsapp" style="margin-top:10px;" onclick="openWhatsApp()">Order on WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card">
+              <h3>Quick Inquiry</h3>
+              <form id="inquiryForm">
+                <div class="form-group">
+                  <label>Aapka Naam</label>
+                  <input type="text" placeholder="Your name" id="inqName">
+                </div>
+
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" placeholder="Your phone" id="inqPhone">
+                </div>
+
+                <div class="form-group">
+                  <label>Message</label>
+                  <input type="text" placeholder="Kya chahiye?" id="inqMessage">
+                </div>
+
+                <div class="form-group submit">
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+              </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://i.postimg.cc/CxvQtj2Q/logo1.png" alt="MAA Annpurna Logo">
+                <div>
+                    <div style="font-weight:700;">MAA Annpurna Resturant & Everfresh</div>
+                    <div style="font-size:12px; color:#a0a0a0;">Shuddh Nashta, Desi Swad!</div>
+                </div>
+            </div>
+            <p class="footer-text">© 2025 MAA Annpurna & Everfresh.</p>
+            <div class="footer-links">
+                <a href="#" onclick="openWhatsApp(); return false;">WhatsApp</a>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Toggle & Panel -->
+    <div class="cart-toggle" id="cartToggle" onclick="toggleCart()">
+        <div style="font-weight:700;">🛒 Cart</div>
+        <div class="cart-count" id="cartCount">0</div>
+    </div>
+
+    <div class="cart-panel" id="cartPanel" aria-hidden="true">
+        <div class="cart-header">
+            <div style="font-weight:700;">Your Order</div>
+            <div style="font-size:12px; color:#a0a0a0;">Ready to place? Review below</div>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <!-- cart items injected here -->
+        </div>
+
+        <div class="cart-footer">
+            <div style="display:flex; justify-content:space-between; color:#a0a0a0;">
+                <div>Subtotal</div>
+                <div id="subtotalText">₹0.00</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; color:#a0a0a0;">
+                <div>Delivery</div>
+                <div id="deliveryText">₹20.00</div>
+            </div>
+            <div class="totals">
+                <div>Total</div>
+                <div id="totalText">₹0.00</div>
+            </div>
+
+            <div style="display:flex; gap:8px;">
+                <button class="btn btn-outline" onclick="clearCart()">Clear</button>
+                <button class="btn btn-whatsapp" onclick="placeOrder()">Order on WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+   <script>
+        /********* DATA: menu items (you can edit/add items here) *********/
+        const menuData = [
+            { id: 'poha', name: 'Poha', price: 60, img: 'https://i.postimg.cc/vHVk4gc3/img3.jpg', desc: 'Garma-garam poha, pyaaz, aloo aur masale ke saath.' },
+            { id: 'jalebi', name: 'Jalebi', price: 40, img: 'https://i.postimg.cc/GhvRZSJw/img1.jpg', desc: 'Meetha aur crispy jalebi, ghar par banaya.' },
+            { id: 'samosa', name: 'Samosa', price: 30, img: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=2340&auto=format&fit=crop', desc: 'Crispy samosa, aloo aur masale se bhara.' },
+            { id: 'chai', name: 'Masala Chai', price: 20, img: 'https://i.postimg.cc/g0DfGCrT/img2.jpg', desc: 'Garma-garam masala chai, doodh aur spices ke saath.' },
+            { id: 'kachori', name: 'Kachori', price: 35, img: 'https://i.postimg.cc/wj3t5zYf/img.jpg', desc: 'Masaledar kachori, moong dal se bhara.' },
+            { id: 'combo', name: 'Breakfast Combo', price: 120, img: 'https://i.postimg.cc/Gt5RdZgw/img4.jpg', desc: 'Poha + Samosa + Jalebi + Chai - Pura nashta ek saath!' }
+        ];
+
+        /********* CART state *********/
+        let cart = {}; // key: item.id, value: { ...item, qty }
+
+        /********* helper: format currency *********/
+        function money(n) {
+            return '₹' + Number(n).toFixed(2);
+        }
+
+        /********* render menu cards *********/
+        const menuGrid = document.getElementById('menuGrid');
+        function renderMenu() {
+            menuGrid.innerHTML = '';
+            menuData.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'menu-card';
+                card.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}">
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3>${item.name}</h3>
+                            <span class="menu-card-price">${money(item.price)}</span>
+                        </div>
+                        <p>${item.desc}</p>
+                        <div class="menu-actions">
+                            <button class="btn btn-primary" onclick="addToCart('${item.id}')">Add</button>
+                            <button class="btn btn-outline" onclick="addToCart('${item.id}', 2)">Add 2</button>
+                            <div style="margin-left:auto; color:#a0a0a0; font-size:14px;">Item code: ${item.id}</div>
+                        </div>
+                    </div>
+                `;
+                menuGrid.appendChild(card);
+            });
+        }
+
+        /********* cart functions *********/
+        function addToCart(id, qty = 1) {
+            const item = menuData.find(m => m.id === id);
+            if (!item) return;
+            if (!cart[id]) {
+                cart[id] = { ...item, qty: 0 };
+            }
+            cart[id].qty += qty;
+            if (cart[id].qty < 1) cart[id].qty = 1;
+            renderCart();
+            openCartTemporarily();
+        }
+
+        function removeFromCart(id) {
+            delete cart[id];
+            renderCart();
+        }
+
+        function updateQty(id, delta) {
+            if (!cart[id]) return;
+            cart[id].qty += delta;
+            if (cart[id].qty <= 0) {
+                removeFromCart(id);
+            }
+            renderCart();
+        }
+
+        function clearCart() {
+            cart = {};
+            renderCart();
+        }
+
+        function calculateTotals() {
+            let subtotal = 0;
+            for (const k in cart) {
+                subtotal += cart[k].price * cart[k].qty;
+            }
+            const delivery = (subtotal > 0 && subtotal < 200) ? 20 : (subtotal === 0 ? 0 : 0); // example: free delivery >=200
+            const total = subtotal + delivery;
+            return { subtotal, delivery, total };
+        }
+
+        /********* render cart panel *********/
+        const cartPanel = document.getElementById('cartPanel');
+        const cartItemsEl = document.getElementById('cartItems');
+        const cartCountEl = document.getElementById('cartCount');
+        const subtotalText = document.getElementById('subtotalText');
+        const deliveryText = document.getElementById('deliveryText');
+        const totalText = document.getElementById('totalText');
+
+        function renderCart() {
+            // count
+            const totalItems = Object.values(cart).reduce((s,i)=>s+i.qty,0);
+            cartCountEl.textContent = totalItems;
+
+            // items
+            cartItemsEl.innerHTML = '';
+            if (totalItems === 0) {
+                cartItemsEl.innerHTML = '<div style="color:#a0a0a0; text-align:center; padding:12px;">Cart is empty. Add items to order.</div>';
+            } else {
+                for (const id in cart) {
+                    const it = cart[id];
+                    const div = document.createElement('div');
+                    div.className = 'cart-item';
+                    div.innerHTML = `
+                        <div class="left">
+                            <img src="${it.img}" alt="${it.name}">
+                            <div class="meta">
+                                <div style="font-weight:700;">${it.name}</div>
+                                <div style="color:#a0a0a0; font-size:13px;">${money(it.price)} each</div>
+                            </div>
+                        </div>
+                        <div style="display:flex; flex-direction:column; align-items:flex-end;">
+                            <div class="qty-controls">
+                                <button onclick="updateQty('${id}', -1)">−</button>
+                                <div style="padding:6px 8px; min-width:28px; text-align:center; background:#0a0a0a; border-radius:6px;">${it.qty}</div>
+                                <button onclick="updateQty('${id}', 1)">+</button>
+                            </div>
+                            <div style="margin-top:8px; font-weight:700;">${money(it.price * it.qty)}</div>
+                            <div style="margin-top:6px;">
+                                <button style="font-size:12px; padding:6px 8px; background:transparent; border:none; color:#ff7b7b; cursor:pointer;" onclick="removeFromCart('${id}')">Remove</button>
+                            </div>
+                        </div>
+                    `;
+                    cartItemsEl.appendChild(div);
+                }
+            }
+
+            // totals
+            const { subtotal, delivery, total } = calculateTotals();
+            subtotalText.textContent = money(subtotal);
+            deliveryText.textContent = money(delivery);
+            totalText.textContent = money(total);
+        }
+
+        /********* toggle cart *********/
+        let cartOpen = false;
+        function toggleCart(force) {
+            if (typeof force === 'boolean') cartOpen = !force ? false : true;
+            else cartOpen = !cartOpen;
+            if (cartOpen) {
+                cartPanel.classList.add('open');
+                cartPanel.setAttribute('aria-hidden', 'false');
+            } else {
+                cartPanel.classList.remove('open');
+                cartPanel.setAttribute('aria-hidden', 'true');
+            }
+        }
+
+        // briefly open cart when adding item
+        function openCartTemporarily() {
+            cartOpen = true;
+            cartPanel.classList.add('open');
+            cartPanel.setAttribute('aria-hidden', 'false');
+            setTimeout(() => {
+                cartOpen = false;
+                cartPanel.classList.remove('open');
+                cartPanel.setAttribute('aria-hidden', 'true');
+            }, 2500);
+        }
+
+        /********* place order via WhatsApp *********/
+        function placeOrder() {
+            const phoneNumber = "917489133559"; // Replace with your WhatsApp number (country code + number)
+            const items = Object.values(cart);
+            if (items.length === 0) {
+                alert('Cart khaali hai. Kripya pehle items add karein.');
+                return;
+            }
+            const { subtotal, delivery, total } = calculateTotals();
+
+            let msgLines = [];
+            msgLines.push('Namaste! Main MAA Annpurna & Everfresh se order karna chahta/chahti hoon:');
+            msgLines.push('');
+            items.forEach(it => {
+                msgLines.push(`${it.name} x ${it.qty} = ${money(it.price * it.qty)}`);
+            });
+            msgLines.push('');
+            msgLines.push(`Subtotal: ${money(subtotal)}`);
+            msgLines.push(`Delivery: ${money(delivery)}`);
+            msgLines.push(`Total: ${money(total)}`);
+            msgLines.push('');
+            msgLines.push('Delivery Address:');
+            msgLines.push('Phone (for contact):');
+
+            const message = msgLines.join('\n');
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        /********* initial render *********/
+        renderMenu();
+        renderCart();
+
+        /********* existing openWhatsApp (direct message) *********/
+        function openWhatsApp() {
+            // opens a simple message if user clicks direct "Order on WhatsApp" without items
+            const phoneNumber = "91 7489133559"; // replace with your number
+            const message = "Namaste! Mujhe MAA Annpurna & Everfresh se order karna hai. Kya aap meri madad kar sakte ho?";
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        /********* inquiry form handler (keeps existing behavior) *********/
+        const form = document.getElementById('inquiryForm');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Shukriya! Hum aapko jald contact karenge.');
+                this.reset();
+            });
+        }
+
+        /********* optional: save cart to localStorage (persist between loads) *********/
+        // load saved cart
+        try {
+            const saved = localStorage.getItem('annpurna_cart_v1');
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                // only restore items that exist in menuData
+                for (const id in parsed) {
+                    const item = menuData.find(m => m.id === id);
+                    if (item) {
+                        cart[id] = { ...item, qty: parsed[id].qty };
+                    }
+                }
+                renderCart();
+            }
+        } catch(err){ /* ignore */ }
+
+        // save on changes
+        const saveCartToStorage = () => {
+            try {
+                localStorage.setItem('annpurna_cart_v1', JSON.stringify(cart));
+            } catch(e){}
+        };
+
+        // observe cart changes by wrapping renderCart to also save
+        const originalRenderCart = renderCart;
+        renderCart = function(){
+            originalRenderCart();
+            saveCartToStorage();
+        };
+
+    </script>
+</body>
+</html>
